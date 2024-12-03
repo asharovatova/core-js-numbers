@@ -108,11 +108,12 @@ function getLinearEquationRoot(a, b) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  // const vector1 = Math.sqrt(x1 ** 2 + y1 ** 2);
-  // const vector2 = Math.sqrt(x2 ** 2 + y2 ** 2);
-  // return Math.acos(Math.cos(x1 * x2 + (y1 * y2) / (vector1 * vector2)));
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const vector1 = Math.sqrt(x1 ** 2 + y1 ** 2);
+
+  const vector2 = Math.sqrt(x2 ** 2 + y2 ** 2);
+
+  return Math.acos((x1 * x2 + y1 * y2) / (vector1 * vector2));
 }
 
 /**
@@ -561,9 +562,8 @@ function getIntegerPartNumber(number) {
  * 1, 2, 3       => 6
  * 0.1, 0.2, 0.3 => 0.6
  */
-function getSumOfNumbers(/* x1, x2, x3 */) {
-  // return x1 + x2 + x3;
-  throw new Error('Not implemented');
+function getSumOfNumbers(x1, x2, x3) {
+  return (x1 * 100 + x2 * 100 + x3 * 100) / 100;
 }
 
 /**
